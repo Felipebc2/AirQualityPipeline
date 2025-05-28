@@ -1,0 +1,7 @@
+confluent-kafka
+redis
+pika
+minio
+python-dotenv
+requests
+streamlit==1.24.1
