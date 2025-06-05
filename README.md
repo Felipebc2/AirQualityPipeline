@@ -44,14 +44,22 @@ Este projeto implementa uma arquitetura robusta e escalável para ingestão e an
 ├── .gitignore
 ├── README.md
 ├── streaming_sim.png
-├── pipeline
-    ├── pipeline
-    ├── streamlit_app
-        ├── app.py
-    ├── Dockerfile
-    ├── README.md
-    ├── airquality.csv
-    ├── docker-compose.yml
-    ├── test.py
-    ├── requirements.txt
+├── pipeline/
+│    ├── pipeline/
+│    │   ├── __init__.py
+│    │   ├── alert_handler.py
+│    │   ├── config.py
+│    │   ├── consumer.py
+│    │   ├── pipeline.py
+│    │   ├── producer.py
+│    │   ├── storage.py
+│    │   └── utils.py
+│    ├── streamlit_app/
+│    │   └── app.py
+│    ├── Dockerfile
+│    ├── README.md
+│    ├── airquality.csv
+│    ├── docker-compose.yml
+│    ├── test.py
+│    ├── requirements.txt
 ```
