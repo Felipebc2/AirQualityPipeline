@@ -63,3 +63,27 @@ Este projeto implementa uma arquitetura robusta e escalável para ingestão e an
 │    ├── test.py
 │    ├── requirements.txt
 ```
+
+<div align="center"><h2>Execução do Projeto</h2></div>
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/sarapacheco-user/AirQualityPipeline.git
+cd AirQualityPipeline
+
+# 2. Atualize dependências do sistema
+sudo apt-get update && sudo apt-get install -y libjpeg-dev zlib1g-dev
+
+# 3. Crie e ative um ambiente virtual
+python3 -m venv venv
+source venv/bin/activate
+
+# 4. Limpe e instale os pacotes do projeto
+pip cache purge
+pip install --no-cache-dir -r requirements.txt
+
+# 5. Suba os containers com Docker Compose
+docker-compose up -d --build
+
+# 6. Execute o Streamlit
+streamlit run streamlit_app/app.py
