@@ -23,6 +23,10 @@ Este projeto implementa um pipeline de dados orientado a eventos para o monitora
 Este projeto implementa uma arquitetura robusta e escalável para ingestão e análise de dados ambientais. O fluxo começa com um Producer lendo dados de um dataset CSV e enviando-os ao Kafka. Um Worker com Celery consome e processa os dados, armazenando resultados em Redis (cache) e MinIO (data lake), além de emitir alertas críticos para o RabbitMQ. Uma API Flask unifica o acesso aos dados e o Airflow orquestra todo o pipeline. Por fim, o Streamlit oferece um dashboard em tempo real com as leituras dos sensores. Ideal para projetos de IoT, dados em tempo real e visualização analítica.
 </p>
 
+<div align="center">
+  <img src="streaming_sim.png" alt="Estrutura do Pipeline">
+</div>
+
 <div align="center"><h2>O que foi desenvolvido</h2></div>
 
 - Leitor de dados (Producer Kafka)
@@ -34,3 +38,20 @@ Este projeto implementa uma arquitetura robusta e escalável para ingestão e an
 - Dashboard em tempo real com Streamlit
 
 <div align="center"><h2>Estrutura do Projeto</h2></div>
+
+```
+├── LICENSE
+├── .gitignore
+├── README.md
+├── streaming_sim.png
+├── pipeline
+    ├── pipeline
+    ├── streamlit_app
+        ├── app.py
+    ├── Dockerfile
+    ├── README.md
+    ├── airquality.csv
+    ├── docker-compose.yml
+    ├── test.py
+    ├── requirements.txt
+```
